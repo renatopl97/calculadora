@@ -1,3 +1,6 @@
+* {
+    font-family: helvetica, arial, sans-serif;
+}
 /*contato*/
 .container {
     background-color: blanchedalmond;
@@ -5,11 +8,11 @@
 
 .cabecalho__contatos{
     align-content: center;
+    align-items: center;
     background-color: aqua;
     display: flex;
     height: 50px;
     justify-content: center;
-    align-items: center;
 }
 
 .cabecalho__contatos-lista {
@@ -18,8 +21,72 @@
 }
 /*calculadora*/
 
-.calculadora {
+.calc {
+    align-items: center;
+    display: flex;
     height: calc(100vh - 100px);
+    justify-content: center;
+}
+
+.calculadora {
+    background-color: #c4c4c4;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: .5em;
+}
+
+.calculadora__display {
+    text-align: right;
+}
+
+.calculadora__display--anterior, .calculadora__display--atual {
+    min-height: 1.6em;
+    overflow-wrap: break-word;
+    padding: .2em;
+}
+
+.calculadora__display--anterior {
+    color: #777;
+}
+
+.calculadora__display--atual {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.calculadora__botoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+}
+
+.calculadora__botoes button {
+    border: 1px solid transparent;
+    border-radius: .5em;
+    height: 4em;
+    font-size: 1.2em;
+    background-color: #dbdbdb;
+    cursor: pointer;
+}
+
+.calculadora__botoes .number {
+    background-color: #f3f3f3;
+}
+
+.calculadora__botoes button:hover {
+    background-color: #bababa;
+    border-color: #999;
+}
+
+.calculadora__botoes .igual {
+    grid-column: span 2;
+    background-color: #75a5cb;
+}
+
+.calculadora__botoes .igual:hover {
+    background-color: #3a91d8;
 }
 
 /*rodapé*/
